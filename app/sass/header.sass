@@ -1,0 +1,224 @@
+@import bourbon
+@import fonts.sass
+@import vars.sass
+
+body
+	font-size: 16px
+	min-width: 576px
+	position: relative
+	line-height: 1.6
+	font-family: "Tit_Web_Regular"
+	color: $text
+	overflow-x: hidden
+	letter-spacing: 0.02em
+
+
+h1,h2,h3
+	color: #fff
+
+h1
+	font-size: 3.125em
+
+h2
+	font-size: 2.5em
+	text-shadow: 0 2px 7px $accent-dark-2
+	text-align: center
+	position: relative
+	padding: 15px 0
+	margin-bottom: 140px
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: calc(50% - 96px)
+		z-index: -1
+		@include triangle(down, 192px, 96px, $accent-2)
+
+h3
+	font-size: 1.56em
+
+span.emph
+	color: $accent-1
+
+p.text
+	letter-spacing: 0.04em
+
+.label
+	font-family: "Pristina"
+	font-size: 1.875em
+	color: #fff
+
+.button-wr
+	text-align: center
+	width: 100%
+	.button
+		white-space: nowrap
+		display: inline-block
+		background-color: $accent-2
+		box-shadow: 0 6px 0 $accent-dark-2
+		border-radius: 20px
+		color: #fff
+		+mt(.3s)
+		&:hover
+			background-color: lighten($accent-2, 5%)
+			text-decoration: none
+		&:active
+			background-color: $accent-dark-2
+		&.button-big
+			font-family: "Tit_Web_Bold"
+			font-size: 2em
+			padding: 10px 100px
+			margin-top: 70px
+		&.button-small
+			font-family: "Dosis"
+			font-size: 1.6em
+			padding: 5px 60px
+
+
+
+
+.topline
+	background-color: #333
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 10
+	width: 100%
+	box-shadow: inset 0 -3px 1px #868686
+	+mt(.3s)
+	&::before
+		content: ''
+		position: absolute
+		bottom: -40px
+		left: 0
+		width: 100%
+		height: 50px
+		background: url(../img/toplineRope.png) no-repeat
+		background-position: top center
+	&.closed
+		top: -60px
+		&:hover
+			top: 0
+	.nav
+		font-size: 1.25em
+		.nav-item
+			.nav-link
+				padding: 20px 35px
+				color: #ededed
+				+mt(.3s)
+				&.active
+					color: #fff
+					font-family: "Tit_Web_Semibold"
+					&:hover
+						text-shadow: none
+				&:hover
+					text-shadow: 0 0 8px $accent-1
+				&:active
+					color: $accent-1
+				&.active:active
+					color: #fff
+
+.ishome
+	.bg
+		position: fixed
+		width: 100%
+		height: 100%
+		background-image: url(../img/bg/bg0.jpg)
+		background-position: bottom center
+		background-size: cover
+		z-index: -1
+		opacity: .3
+	.main-head, section
+		position: relative
+	&::before, &::after
+		content: ''
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		z-index: -1
+	&::after /* pattern */
+		background: $pattern_dot
+
+.main-head
+	min-height: 100vh
+	padding: 150px 0 100px 0
+	&::before /* bg image */
+	.aboutMe-wr
+		position: relative
+		&::before, &::after /* gradient bg */
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			background: linear-gradient(to right, $accent-1, transparent)
+			opacity: .5
+			z-index: -1
+		&::after
+			height: 120px
+			background: linear-gradient(to right, lighten($accent-2,8%),#000)
+			opacity: 1
+		.title-wr
+			padding: 12px 60px
+			.label
+				position: relative
+				left: 100px
+				bottom: 17px
+		.image
+			width: 100%
+			height: 100%
+			background: url(../img/myPhoto.jpg)
+			background-position: 60% 55%
+			background-size: 180%
+		.features-wr
+			margin-left: 20px
+			padding: 30px 15px
+			font-size: 1.75em
+			font-family: "Dosis"
+			.item
+				margin-bottom: 40px
+				&:hover
+					span:first-child
+						left: 5px
+						&::before
+							background-color: $accent-2
+					.space
+						margin-left: 20px
+						
+				p
+					line-height: 1.35em
+					white-space: nowrap
+					.space
+						display: inline-block
+						margin-right: 70px
+						+mt(.25s)
+				span:first-child
+					left: -10px
+					margin-right: 20px
+					color: #fff
+					position: relative
+					+mt(.25s)
+					&::before
+						content: ''
+						position: absolute
+						z-index: -1
+						top: calc(55% - 14px)
+						right: -10px
+						width: 100px
+						height: 28px
+						background-color: $accent-dark-2
+						+mt(.5s)
+				.emph
+					color: #000
+					font-style: italic
+					+mt(.3s)
+
+
+
+
+
+.hidden
+	display: none

@@ -1,0 +1,225 @@
+@import bourbon
+@import vars.sass
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+
+//Custom Styles Here
+
+section
+	padding: 130px 0 80px
+
+.s-myProjects
+	h2
+		margin-bottom: 60px
+	.button-wr
+		margin:
+			top: 40px
+			bottom: 20px
+	p.under-button
+		font-size: 1.5em
+		font-family: "Tit_Web_Italic"
+	.item-wr
+		width: 100%
+		margin: 80px auto 130px
+		&:hover
+			.label-wr
+				background-color: $accent-dark-1
+			.item
+				.image
+					&::before
+						opacity: 0
+					background-position: bottom center
+					transition: all 12s linear
+		&.item-empty
+			.img-wr
+				text-align: center
+				p
+					font-size: 3em
+					font-family: "Tit_Web_SemiboldItalic"
+					line-height: 0.7em
+					color: $accent-dark-2
+					text-transform: uppercase
+					margin-top: 20px
+					span
+						font-size: 0.5em
+						font-family: "Tit_Web_Italic"
+						text-transform: none
+						position: relative
+						&::after
+							content: 'and a cat'
+							position: absolute
+							left: -35px
+							bottom: -45px
+							color: $accent-dark-2
+							font-size: 0.65em
+							transform: rotate(30deg)
+		.item
+			.image
+				width: 100%
+				height: 100%
+				background-size: cover
+				background-position: top center
+				position: relative
+				+mt(2s)
+				&::before
+					position: absolute
+					content: ''
+					left: 0
+					top: 0
+					width: 100%
+					height: 100%
+					background: $pattern-line
+					+mt(.3s)
+		@each $num in 1,2,3
+			.item-#{$num} .image
+				background-image: url(../img/myProjects/#{$num}.jpg)
+		.label-wr
+			border-top: 3px solid $accent-dark-1
+			padding: 25px 40px
+			font-size: 1.125em
+			font-family: "Dosis"
+			font-style: italic
+			background-color: #222
+			color: #ededed
+			border-radius: 0 0 20px 20px
+			+mt(.3s)
+			p
+				margin-bottom: 5px
+				letter-spacing: 0.04em
+				a
+					color: #fff
+					text-decoration: underline
+					&:hover
+						text-decoration: none
+
+
+.s-contactMe
+	padding: 
+		bottom: 150px
+		top: 80px
+	h2
+		margin-bottom: 100px
+	.text-wr
+		font-size: 1.315em
+		padding: 0 67px 0 33px
+		p.text
+			margin-bottom: 30px
+		.image
+			height: 230px
+			width: 100%
+			background-image: url(../img/cat.jpg)
+			background-size: cover
+			background-position: center 30%
+			border-radius: 20px
+			box-shadow: 0 4px 5px $accent-dark-2
+	form.contactMe-form
+		padding: 0 22px
+		.button-wr
+			text-align: right
+			.button
+				outline: none
+				border: none
+				cursor: pointer
+		.form-item
+			textarea
+				resize: none
+				line-height: 1.45em
+			input, textarea
+				outline: none
+				border: none
+				display: block
+				width: 100%
+				margin-bottom: 50px
+				border-radius: 20px
+				font-size: 1.75em
+				font-family: "Dosis"
+				color: $accent-dark-2
+				background-color: transparent
+				box-shadow: 0 2px 7px rgba(85, 30, 54, 0.5)
+				border-bottom: 3px solid transparent
+				padding: 5px 20px 5px 30px 
+				+mt(.25s)
+				&:focus
+					background-color: rgba(255,255,255,.5)
+					box-shadow: 0 2px 7px $accent-1
+
+footer
+	position: relative
+	padding: 60px 0
+	background-color: #141414
+	color: #fff
+	&::before
+		content: ''
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		background-image: url(../img/bg/bg_footer.jpeg)
+		background-position: bottom center
+		opacity: .3
+
+	.info-wr
+		text-align: center
+		.info-title
+			text-transform: uppercase
+			margin-bottom: 30px
+			.pre-label
+				font-size: 1.125em
+		.info-content
+			font-family: "Dosis"
+			font-size: 1.4em
+			line-height: 1.35em
+			color: #ededed
+			a.text-link
+				border-bottom: 1px solid #fff
+				color: #fff
+				&:hover
+					text-decoration: none
+					border: none
+			a.s-med
+				display: inline-block
+				width: 45px
+				height: 45px
+				border-radius: 100em
+				background: #fff no-repeat
+				background-position: center
+				background-size: cover
+				+mt(.3s)
+			@each $smed in vk, twitter, codepen
+				.s-med.#{$smed}
+					background-image: url(../img/s-med/#{$smed}.png)
+
+
+
+
+
+//ALWAYS END
+@import media
+
+//Load Libs SASS (файлы с расширением css писать в кавычках и без .css)
+@import "../libs/animate.css/animate.min"
+@import "../libs/font-awesome/css/font-awesome.min"
+@import "../libs/magnific-popup/dist/magnific-popup"

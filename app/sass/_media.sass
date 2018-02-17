@@ -1,0 +1,157 @@
+@import bourbon
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	.ishome
+		.button-wr
+			margin-top: 0
+			.button
+				&.button-big
+					font-size: 1.5em
+
+	.ishome
+		.main-head
+			.aboutMe-wr
+				.features-wr
+					font-size: 1.6em
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	.ishome
+		.topline
+			.nav
+				font-size: 1.1em
+		h2
+			font-size: 2em
+			&::before
+				border-width: 80px 80px 0
+				left: calc(50% - 80px)
+				top: 2px
+		.button
+			&.button-small
+				font-size: 1.45em
+
+	.ishome
+		.main-head
+			.aboutMe-wr
+				.title-wr
+					position: relative
+					left: -50px
+				.image
+					margin: 0 auto
+					position: relative
+					border-radius: 0 0 20px 20px
+					top: -20px
+					height: 400px
+					width: 600px
+					background-position: 75% 38%
+					background-size: 125%
+				.features-wr
+					.item
+						p
+							span:first-child
+								&::before
+									width: 300px
+		.s-contactMe
+			.text-wr
+				font-size: 1.2em
+				padding: 0
+				padding-right: 20px
+			.contactMe-form
+				.form-item
+					input, textarea
+						font-size: 1.5em
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	.ishome
+		.button-wr
+			.button
+				&.button-big
+					font-size: 1.4em
+					padding:
+						left: 70px
+						right: 70px
+
+	.ishome
+		.main-head
+			.aboutMe-wr
+				.image
+					width: 100%
+				.features-wr
+					font-size: 1.56em
+		.s-contactMe
+			.text-wr
+				padding: 0
+				margin-bottom: 70px
+
+		footer
+			.info-wr
+				margin-bottom: 80px
+			
+
+				
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 576px)
+	.topline
+		&.closed
+			top: -200px
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
